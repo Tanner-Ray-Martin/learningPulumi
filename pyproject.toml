@@ -1,0 +1,21 @@
+[project]
+name = "learningPulumi"
+version = "0.1.0"
+description = "Add a short description here"
+requires-python = ">= 3.11"
+dependencies = [ "pulumi>=3.133.0,<3.134", "pulumi-aws>=6.52.0,<6.53"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.pixi.project]
+channels = ["conda-forge"]
+platforms = ["win-64"]
+
+[tool.pixi.pypi-dependencies]
+learningPulumi = { path = ".", editable = true }
+
+[tool.pixi.tasks]
+pul_up = "pulumi up"
+pul_new = "pulumi new aws-python --force"
