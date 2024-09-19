@@ -3,7 +3,11 @@ name = "learningPulumi"
 version = "0.1.0"
 description = "Add a short description here"
 requires-python = ">= 3.11"
-dependencies = [ "pulumi>=3.133.0,<3.134", "pulumi-aws>=6.52.0,<6.53"]
+dependencies = [ "pulumi>=3.133.0,<3.134", "pulumi-aws>=6.52.0,<6.53", "pulumi-docker>=4.5.5,<4.6", "streamlit>=1.38.0,<1.39", "matplotlib>=3.9.2,<3.10"]
+
+[tool.setuptools.packages.find]
+exclude = ["images", "streamlit_app"]
+
 
 [build-system]
 requires = ["setuptools"]

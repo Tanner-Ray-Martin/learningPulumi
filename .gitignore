@@ -4,3 +4,5 @@ venv/
 .pixi/
 .mypy_cache/
 *.egg-info/
+*images
+streamlit_app/
